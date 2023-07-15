@@ -15,6 +15,13 @@ const reducer = (state, action) => { // state is used to hold the current state 
                 ...state, // uses the spread operator (...) to create a new state object that retains the existing properties of the state while modifying specific properties
                 basket: [...state.basket, action.item],
             };
+
+        case 'EMPTY_BASKET':
+            return {
+              ...state,
+              basket: []
+            };
+
         case 'REMOVE_FROM_BASKET':
             const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id // Find the first one and return 
@@ -30,7 +37,6 @@ const reducer = (state, action) => { // state is used to hold the current state 
                 ...state, 
                 basket: newBasket
             }
-        
         case 'SET_USER':
             return {
                 ...state, 

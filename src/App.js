@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
 import Payment from "./Payment";
+import Orders from "./Orders";
+import Footer from "./Footer";
 import { auth } from "./firebase"
 import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js"
@@ -13,9 +15,6 @@ import { Elements } from "@stripe/react-stripe-js"
 
 const promise = loadStripe( "pk_test_51HPvU9DFg5koCdLGJJbNo60QAU99BejacsvnKvT8xnCu1wFLCuQP3WBArscK3RvSQmSIB3N0Pbsc7TtbQiJ1vaOi00X9sIbazL")
                           //"pk_test_51MxNoHFDiGp5yo0l5vw7toWcsxTNof5Efw48mPrzAK26idshaX5A7QpgOD2l391rPopwALFmWq3QvPFghewoDfy900LlMOmkt2");
-
-
-
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -45,6 +44,10 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
+        <Route path="/orders" element={<React.Fragment> 
+            <Header />
+            <Orders />
+          </React.Fragment>} />
           <Route path="/login" element={<React.Fragment> 
             <Login />
           </React.Fragment>} />
@@ -61,6 +64,7 @@ function App() {
           <Route path="/" element={<React.Fragment> 
             <Header />
             <Home />
+            <Footer />
           </React.Fragment>} />
         </Routes>
       </div>
