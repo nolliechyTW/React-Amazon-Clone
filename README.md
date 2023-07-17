@@ -1,6 +1,17 @@
 # Full-Stack Amazon Clone
-Host on : [clone-b74be.web.app](clone-b74be.web.app)<br/><br/>
-This is a full-stack Amazon clone developed using React.js, Express.js, Firebase, and Stripe API. The project includes features such as checkout, payment integration, user authentication, and real-time database functionality. The clone has been deployed on Firebase hosting.
+This is a full-stack Amazon clone developed using React.js, Express.js, Firebase, and Stripe API. The project includes features such as checkout, payment integration, user authentication, and real-time database functionality. The clone has been deployed on Firebase hosting. <br/><br/>
+To get started, follow these steps to set up your testing account:
+
+Option 1: Create Your Own Testing Account
+
+Click on "Sign Up." and follow the on-screen instructions to create your account with a unique email and secure password. <br/><br/>
+Option 2: Use the Shared Testing Account 
+
+* Account: test@gmail.com <br/>
+* Password: 123456
+
+Thank you for your interest in our project! Happy testing!
+
 
 ## Technologies Used
 * React.js
